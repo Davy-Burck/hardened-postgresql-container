@@ -67,9 +67,9 @@ Mesures de Sécurité Implémentées
 
    -- Suppression des Capacités Noyau (--cap-drop=ALL) : Retrait de toutes les capacités d'administration Linux par défaut pour réduire drastiquement la surface d'attaque.
 
-   --Verrouillage des Privilèges (no-new-privileges) : Interdiction formelle d'élever ses privilèges au sein du conteneur (protection contre les binaires SUID).
+   -- Verrouillage des Privilèges (no-new-privileges) : Interdiction formelle d'élever ses privilèges au sein du conteneur (protection contre les binaires SUID).
 
-   --Fixation de Version (postgres:17.4) : Utilisation d'un tag explicite et figé (au lieu de latest) pour assurer la stabilité en production.
+   -- Fixation de Version (postgres:17.4) : Utilisation d'un tag explicite et figé (au lieu de latest) pour assurer la stabilité en production.
 
 Démonstration et Vérifications
 1. Vérification de l'utilisateur non-root
