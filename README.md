@@ -59,17 +59,17 @@ docker run -d --rm \
 
 Mesures de Sécurité Implémentées
 
-    Isolation Réseau (--network) : Rattachement à un sous-réseau dédié (11.10.11.0/24) avec une IP fixe (11.10.11.25), évitant toute exposition sur le pont réseau par défaut.
+   -- Isolation Réseau (--network) : Rattachement à un sous-réseau dédié (11.10.11.0/24) avec une IP fixe (11.10.11.25), évitant toute exposition sur le pont réseau par défaut.
 
-    Persistance des Données (-v) : Stockage externe via un volume Docker pour garantir qu'aucune donnée ne disparaisse lors de la suppression ou de la mise à jour du conteneur.
+   --  Persistance des Données (-v) : Stockage externe via un volume Docker pour garantir qu'aucune donnée ne disparaisse lors de la suppression ou de la mise à jour du conteneur.
 
-    Exécution Non-Root (--user 999:999) : Démarrage direct sous l'utilisateur non-privilégié postgres pour prévenir toute faille de type Container Breakout.
+   -- Exécution Non-Root (--user 999:999) : Démarrage direct sous l'utilisateur non-privilégié postgres pour prévenir toute faille de type Container Breakout.
 
-    Suppression des Capacités Noyau (--cap-drop=ALL) : Retrait de toutes les capacités d'administration Linux par défaut pour réduire drastiquement la surface d'attaque.
+   -- Suppression des Capacités Noyau (--cap-drop=ALL) : Retrait de toutes les capacités d'administration Linux par défaut pour réduire drastiquement la surface d'attaque.
 
-    Verrouillage des Privilèges (no-new-privileges) : Interdiction formelle d'élever ses privilèges au sein du conteneur (protection contre les binaires SUID).
+   --Verrouillage des Privilèges (no-new-privileges) : Interdiction formelle d'élever ses privilèges au sein du conteneur (protection contre les binaires SUID).
 
-    Fixation de Version (postgres:17.4) : Utilisation d'un tag explicite et figé (au lieu de latest) pour assurer la stabilité en production.
+   --Fixation de Version (postgres:17.4) : Utilisation d'un tag explicite et figé (au lieu de latest) pour assurer la stabilité en production.
 
 Démonstration et Vérifications
 1. Vérification de l'utilisateur non-root
