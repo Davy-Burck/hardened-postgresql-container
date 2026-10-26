@@ -35,10 +35,9 @@ Ce projet présente une configuration de conteneur PostgreSQL hautement sécuris
 
 Guide de Déploiement
 1. Prérequis
-
 Assure-toi d'avoir Docker installé sur ta machine hôte Linux.
+
 2. Création du réseau isolé et du volume persistant
-Bash
 
 # Création du réseau virtuel privé
 docker network create --subnet=11.10.11.0/24 pg_network
